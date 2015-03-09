@@ -244,7 +244,7 @@ static NSUInteger _prefetchedNum = 10;
 - (CGSize)size
 {
     if (self.images.count) {
-        return [[self.images objectAtIndex:0] size];
+        return [(UIImage *)[self.images objectAtIndex:0] size];
     }
     return [super size];
 }
@@ -252,7 +252,7 @@ static NSUInteger _prefetchedNum = 10;
 - (CGImageRef)CGImage
 {
     if (self.images.count) {
-        return [[self.images objectAtIndex:0] CGImage];
+        return [(UIImage *)[self.images objectAtIndex:0] CGImage];
     } else {
         return [super CGImage];
     }
@@ -261,7 +261,7 @@ static NSUInteger _prefetchedNum = 10;
 - (UIImageOrientation)imageOrientation
 {
     if (self.images.count) {
-        return [[self.images objectAtIndex:0] imageOrientation];
+        return [(UIImage *)[self.images objectAtIndex:0] imageOrientation];
     } else {
         return [super imageOrientation];
     }
